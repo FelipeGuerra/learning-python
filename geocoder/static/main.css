@@ -1,0 +1,27 @@
+body {
+    background-image: url('geometric-background.jpg');
+}
+
+.full-height {
+	min-height: 100vh;
+	padding: 20px 0;
+}
+
+.page-content {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+table.dataframe {
+	margin-top: 40px;
+	border-radius: 10px;
+	overflow: hidden;
+	text-align: center;
+	vertical-align: middle;
+}
+table.dataframe th,
+table.dataframe td {
+	vertical-align: middle;
+}

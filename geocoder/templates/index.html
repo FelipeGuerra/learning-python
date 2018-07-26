@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="shortcut icon" type="image/png" href="../static/favicon.png"/>
+
+	<title>Geocoder!</title>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+	    crossorigin="anonymous">
+	<link rel="stylesheet" href="../static/main.css">
+</head>
+
+<body>
+	<div class="container-fuid">
+		<div class="row full-height justify-content-center align-items-center">
+			<div class="page-content col-12 col-sm-8 col-md-6 text-center">
+				<h1>Get geolocalization by address</h1>
+				<h3>Please upload a CSV file with a "Address" column</h3>
+				
+				<form action="{{url_for('success')}}" method="post" enctype="multipart/form-data">
+					<div class="form-group form-control-file">
+						<input type="file" name="file" class="form-control">
+					</div>
+
+					<div class="btn-group-toggle" data-toggle="buttons">
+						<button type="submit" class="btn btn-dark">Submit</button>
+						{% include btn ignore missing %}
+					</div>
+				</form>
+			</div>			
+
+			<div class="message">
+				{{html | safe}}
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
